@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Weatherly <span>☀</span></h1>
+      <p>Weather, wherever you are.</p>
+    </header>
+
+    <form id="search-form">
+      <input
+        id="city-input"
+        type="text"
+        placeholder="Enter a city..."
+        aria-label="City name"
+        value="Lagos"
+        required
+      >
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="message" role="status">Loading weather...</p>
+
+    <section id="weather" hidden>
+      <div class="current">
+        <p id="location"></p>
+        <p id="date"></p>
+        <div id="icon" class="weather-icon">☀️</div>
+        <h2 id="temperature">--°C</h2>
+        <p id="description"></p>
+        <p>Feels like <span id="feels-like">--</span>°C</p>
+      </div>
+
+      <div class="details">
+        <div class="detail">
+          <span>💧 Humidity</span>
+          <strong id="humidity">--%</strong>
+        </div>
+        <div class="detail">
+          <span>💨 Wind speed</span>
+          <strong id="wind">-- km/h</strong>
+        </div>
+      </div>
+
+      <h3>5-Day Forecast</h3>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+    <footer>
+      Weather data by
+      <a href="https://open-meteo.com/" target="_blank"
+         rel="noreferrer">Open-Meteo</a>
+    </footer>
+  </main>
+</body>
+</html>
