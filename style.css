@@ -1,0 +1,188 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #f5f7ff;
+  background: linear-gradient(135deg, #101827, #243b55);
+}
+
+.app {
+  width: 100%;
+  max-width: 540px;
+  padding: 28px;
+  border: 1px solid #ffffff20;
+  border-radius: 24px;
+  background: #172338dd;
+  box-shadow: 0 20px 60px #0004;
+}
+
+header h1 {
+  margin-bottom: 8px;
+  font-size: 30px;
+}
+
+header h1 span {
+  color: #ffd166;
+}
+
+header p,
+#date {
+  color: #b5c2d8;
+}
+
+#search-form {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0 14px;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 13px;
+  color: white;
+  background: #ffffff10;
+  border: 1px solid #ffffff30;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+button {
+  padding: 13px 18px;
+  color: #142033;
+  background: #ffd166;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #ffdf91;
+}
+
+#message {
+  color: #ffd166;
+  min-height: 20px;
+}
+
+.current {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#location {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.weather-icon {
+  font-size: 65px;
+  margin: 12px 0;
+}
+
+#temperature {
+  font-size: 58px;
+  margin: 0;
+}
+
+#description {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0 28px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #ffffff0c;
+}
+
+.detail span {
+  color: #c4d0e3;
+  font-size: 14px;
+}
+
+.detail strong {
+  font-size: 19px;
+}
+
+h3 {
+  margin-bottom: 16px;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.day {
+  text-align: center;
+  padding: 12px 4px;
+  border-radius: 12px;
+  background: #ffffff0c;
+}
+
+.day p {
+  font-size: 12px;
+}
+
+.day .forecast-icon {
+  font-size: 24px;
+}
+
+.day strong {
+  font-size: 13px;
+}
+
+footer {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 12px;
+  color: #b5c2d8;
+}
+
+footer a {
+  color: #ffd166;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 400px) {
+  .app {
+    padding: 18px;
+  }
+
+  .forecast {
+    gap: 4px;
+  }
+
+  .day {
+    padding: 10px 2px;
+  }
+
+  .day p {
+    font-size: 10px;
+  }
+}
